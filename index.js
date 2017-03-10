@@ -92,7 +92,11 @@ module.exports = function (val, opts, pad) {
 
 				var eol = objKeys.length - 1 === i ? tokens.newLine : ',' + tokens.newLineOrSpace;
 				var key = /^[a-z$_][a-z$_0-9]*$/i.test(el) ? el : stringify(el, opts);
-				return tokens.indent + key + ': ' + stringify(val[el], opts, pad + opts.indent) + eol;
+				var value = stringify(val[el], opts, pad + opts.indent);
+				if (opts.transform) {
+					value = opts.transform(val, el, value);
+				}
+				return tokens.indent + String(key) + ': ' + value + eol;
 			}).join('') + tokens.pad + '}';
 
 			seen.pop(val);
