@@ -70,7 +70,13 @@ it('considering filter option to stringify an object', function () {
 });
 
 it('allows an object to be transformed', function () {
-	var obj = {foo: {val: 10}, bar: 9, baz: [8]};
+	var obj = {
+		foo: {
+			val: 10
+		},
+		bar: 9,
+		baz: [8]
+	};
 	var actual = stringifyObject(obj, {
 		transform: (obj, prop, result) => {
 			if (prop === 'val') {
@@ -83,6 +89,7 @@ it('allows an object to be transformed', function () {
 			return result;
 		}
 	});
+
 	assert.equal(actual, '{\n\tfoo: {\n\t\tval: 11\n\t},\n\tbar: \'9L\',\n\tbaz: [\n\t\tLOL\n\t]\n}');
 });
 
