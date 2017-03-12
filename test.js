@@ -78,7 +78,7 @@ it('allows an object to be transformed', function () {
 		baz: [8]
 	};
 	var actual = stringifyObject(obj, {
-		transform: (obj, prop, result) => {
+		transform: function (obj, prop, result) {
 			if (prop === 'val') {
 				return String(obj[prop] + 1);
 			} else if (prop === 'bar') {

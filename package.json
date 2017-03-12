@@ -1,13 +1,12 @@
 {
-  "name": "stringify-object",
-  "version": "2.4.0",
-  "description": "Stringify an object/array like JSON.stringify just without all the double-quotes",
+  "name": "stringify-object-es5",
+  "version": "2.5.0",
+  "description": "Stringify an object/array like JSON.stringify just without all the double-quotes (ES5 compatible)",
   "license": "BSD-2-Clause",
-  "repository": "yeoman/stringify-object",
+  "repository": "searls/stringify-object",
   "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
+    "name": "Justin Searls",
+    "email": "searls@gmail.com"
   },
   "engines": {
     "node": ">=0.10.0"

@@ -1,4 +1,6 @@
-# stringify-object [![Build Status](https://secure.travis-ci.org/yeoman/stringify-object.svg?branch=master)](http://travis-ci.org/yeoman/stringify-object)
+# stringify-object [![Build Status](https://secure.travis-ci.org/searls/stringify-object.svg?branch=master)](http://travis-ci.org/searls/stringify-object)
+
+**This fork of [yeoman/stringify-object](https://github.com/yeoman/stringify-object) is ES5 compatible**
 
 > Stringify an object/array like JSON.stringify just without all the double-quotes.
 
